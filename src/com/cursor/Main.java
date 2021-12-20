@@ -99,7 +99,7 @@ public class Main {
 
         char[] array_c = new char[20];
         char c;
-        for (c = 0; c < array_c.length-1; c++) {
+        for (c = 0; c < array_c.length - 1; c++) {
             array_c[c] = c;
         }
         System.out.println(array_c[c]);
