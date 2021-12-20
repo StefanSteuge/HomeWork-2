@@ -10,7 +10,8 @@ public class Main {
         // 1. Заповнити масив тільки парними числами;
 
         int[] array = new int[50];
-        for (int i = 0; i < array.length; i += 2) {
+        int i;
+        for (i = 0; i < array.length; i += 2) {
             array[i] = i;
             System.out.print(array[i] + " ");
         }
@@ -19,7 +20,7 @@ public class Main {
         //2. Заповнити масив рандомними числами;
 
         Random random = new Random();
-        for (int i = 0; i < array.length; i++) {
+        for (i = 0; i < array.length; i++) {
             array[i] = random.nextInt(85);
             System.out.print(array[i] + " ");
         }
@@ -28,7 +29,6 @@ public class Main {
         //3. Вивести середнє значення масиву;
 
         int a;
-        int i;
         int average = 0;
         for (i = 0; i < array.length; i++) {
             array[i] = i;
@@ -59,10 +59,10 @@ public class Main {
         // 6. Просортувати масив в порядку зростання;
 
         int[] arraySort = {6, 5, 75, 65, 24, 48, 25, 36, 52, 8};
-        for (i = 0; i < array.length; i++)
-            arraySort[i] = i;
-        Arrays.sort(array);
-        System.out.print(Arrays.toString(array) + " ");
+        for (i = 0; i < arraySort.length; i++) {
+            Arrays.sort(arraySort);
+            System.out.print(arraySort[i] + " ");
+        }
         System.out.println();
 
         // 7. Вивести найменше значення в масиві;
@@ -97,15 +97,15 @@ public class Main {
 
         //  10. Вивести перших 20 символів з таблиці ASCI;
 
-        char[] arrayChar = new char[20];
+        char[] array_c = new char[20];
         char c;
-        for (c = 0; c < arrayChar.length; c++) {
-            arrayChar[c] = c;
+        for (c = 0; c < array_c.length-1; c++) {
+            array_c[c] = c;
         }
-        System.out.print(c + " ");
+        System.out.println(array_c[c]);
         System.out.println();
 
-        //*   Заповнити масив рандомними числами, вивести їх, потім поміняти місцями парні з непарними;
+ /*       //*   Заповнити масив рандомними числами, вивести їх, потім поміняти місцями парні з непарними;
 
         Random randomNext = new Random();
         int j = 0;
@@ -127,5 +127,7 @@ public class Main {
             }
         }
         System.out.print(i + j);
+        */
+
     }
 }
