@@ -8,38 +8,37 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("1. Заповнити масив тільки парними числами:");
-        int[] array = new int[25];
+        int[] arrayFillEven = new int[25];
         int i;
-        for (i = 0; i < array.length; i += 2) {
-            array[i] = i;
-            System.out.print(array[i] + " ");
+        for (i = 0; i < arrayFillEven.length; i += 2) {
+            arrayFillEven[i] = i;
+            System.out.print(arrayFillEven[i] + " ");
         }
 
         System.out.println("\n" + "2. Заповнити масив рандомними числами:");
-        int[] array1 = new int[50];
+        int[] arrayRandom = new int[15];
         Random random = new Random();
-        for (i = 0; i < array1.length; i++) {
-            array1[i] = random.nextInt(85);
-            System.out.print(array1[i] + " ");
+        for (i = 0; i < arrayRandom.length; i++) {
+            arrayRandom[i] = random.nextInt(85);
+            System.out.print(arrayRandom[i] + " ");
         }
 
 
         System.out.println("\n" + "3. Вивести середнє значення масиву:");
         int a;
         int average = 0;
-        for (i = 0; i < array.length; i++) {
-            array[i] = i;
-            a = array[i];
+        int[] arrayEver = new int[25];
+        for (i = 0; i < arrayEver.length; i++) {
+            a = arrayEver[i];
             average = average + a;
         }
-        System.out.print("Average: " + average / i);
+        System.out.print("Average: " + average / arrayEver.length);
 
 
         System.out.println("\n" + "4. Вивести суму всіх значень кратних 3:");
-        int[] array2 = new int[25];
+        int[] arraySum3 = new int[25];
         int summ = 0;
-        for (i = 0; i < array2.length; i++) {
-            array2[i] = i;
+        for (i = 0; i < arraySum3.length; i++) {
             if (i % 3 == 0) {
                 summ += i;
             }
@@ -48,10 +47,11 @@ public class Main {
 
 
         System.out.println("\n" + "5. Вивести значення всіх парних індексів масиву:");
-        for (i = 0; i < array.length; i += 2) {
-            array[i] = i;
+        int[] arrayEven = new int[25];
+        for (i = 0; i < arrayEven.length; i += 2) {
             System.out.print(i + " ");
         }
+
 
 
         System.out.println("\n" + "6. Просортувати масив в порядку зростання:");
@@ -82,21 +82,18 @@ public class Main {
 
         System.out.println("\n" + "9. Вивести суму значень всіх парних індексів:");
         int sum = 0;
-        for (i = 0; i < array.length; i += 2) {
-            array[i] = i;
-            sum += array[i];
+        int[] arraySumEven = new int[25];
+        for (i = 0; i < arraySumEven.length; i += 2) {
+            sum += arraySumEven[i];
         }
         System.out.print(sum);
 
 
         System.out.println("\n"+"10. Вивести перших 20 символів з таблиці ASCI:");
-        char[] array_c = new char[20];
         char c;
-        for (c = 0; c < array_c.length; c++) {
-            array_c[c] = (char)(c);
-            System.out.print(c);
+        for (c = 32; c < 52; c++) {
+            System.out.print(c + " ");
         }
-       // System.out.print(array_c);g
 
 
 /*
