@@ -7,91 +7,71 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
+        int average = 0;
+        int sumof3 = 0;
+        int sumEven = 0;
+
         System.out.println("1. Заповнити масив тільки парними числами:");
-        int[] arrayFillEven = new int[25];
-        int i;
-        for (i = 0; i < arrayFillEven.length; i += 2) {
-            arrayFillEven[i] = i;
-            System.out.print(arrayFillEven[i] + " ");
+        int[] arrayGeneral = new int[25];
+        for (int i = 0; i < arrayGeneral.length; i += 2) {
+            arrayGeneral[i] += i;
+            System.out.print(arrayGeneral[i] + " ");
         }
 
         System.out.println("\n" + "2. Заповнити масив рандомними числами:");
-        int[] arrayRandom = new int[15];
         Random random = new Random();
-        for (i = 0; i < arrayRandom.length; i++) {
-            arrayRandom[i] = random.nextInt(85);
-            System.out.print(arrayRandom[i] + " ");
+        for (int i = 0; i < arrayGeneral.length; i++) {
+            arrayGeneral[i] = random.nextInt(85);
+            System.out.print(arrayGeneral[i] + " ");
         }
-
 
         System.out.println("\n" + "3. Вивести середнє значення масиву:");
-        int a;
-        int average = 0;
-        int[] arrayEver = new int[25];
-        for (i = 0; i < arrayEver.length; i++) {
-            a = arrayEver[i];
-            average = average + a;
+        for (int value : arrayGeneral) {
+            average = average + value;
         }
-        System.out.print("Average: " + average / arrayEver.length);
-
+        System.out.print("Average: " + average / arrayGeneral.length);
 
         System.out.println("\n" + "4. Вивести суму всіх значень кратних 3:");
-        int[] arraySum3 = new int[25];
-        int summ = 0;
-        for (i = 0; i < arraySum3.length; i++) {
+        for (int i = 0; i < arrayGeneral.length; i++) {
             if (i % 3 == 0) {
-                summ += i;
+                sumof3 += i;
             }
         }
-        System.out.print(summ);
-
+        System.out.print(sumof3);
 
         System.out.println("\n" + "5. Вивести значення всіх парних індексів масиву:");
-        int[] arrayEven = new int[25];
-        for (i = 0; i < arrayEven.length; i += 2) {
-            System.out.print(i + " ");
+        for (int i = 0; i < arrayGeneral.length; i += 2) {
+            System.out.print(arrayGeneral[i] + " ");
         }
-
-
 
         System.out.println("\n" + "6. Просортувати масив в порядку зростання:");
-        int[] arraySort = {6, 5, 75, 65, 24, 48, 25, 36, 52, 8};
-        for (i = 0; i < arraySort.length; i++) {
-            Arrays.sort(arraySort);
-            System.out.print(arraySort[i] + " ");
+        for (int k : arrayGeneral) {
+            Arrays.sort(arrayGeneral);
+            System.out.print(k + " ");
         }
 
-
         System.out.println("\n" + "7. Вивести найменше значення в масиві:");
-        double[] arrayMin = {5.85, 87.79, 0.78, 8.4, 1.2, 55.89};
-        double min = arrayMin[0];
-        for (i = 0; i < arrayMin.length; i++) {
-            if (min > arrayMin[i]) min = arrayMin[i];
+        int min = arrayGeneral[0];
+        for (int j : arrayGeneral) {
+            if (min > j) min = j;
         }
         System.out.print(min);
 
-
         System.out.println("\n" + "8. Вивести найбільше значення масиву:");
-        double[] arrayMax = {5.85, 87.79, 0.78, 8.4, 1.2, 55.89};
-        double max = arrayMax[0];
-        for (i = 0; i < arrayMax.length; i++) {
-            if (max < arrayMax[i]) max = arrayMax[i];
+        int max = arrayGeneral[0];
+        for (int j : arrayGeneral) {
+            if (max < j) max = j;
         }
         System.out.print(max);
 
-
         System.out.println("\n" + "9. Вивести суму значень всіх парних індексів:");
-        int sum = 0;
-        int[] arraySumEven = new int[25];
-        for (i = 0; i < arraySumEven.length; i += 2) {
-            sum += arraySumEven[i];
+        for (int i = 0; i < arrayGeneral.length; i += 2) {
+            sumEven += arrayGeneral[i];
         }
-        System.out.print(sum);
-
+        System.out.print(sumEven);
 
         System.out.println("\n"+"10. Вивести перших 20 символів з таблиці ASCI:");
-        char c;
-        for (c = 32; c < 52; c++) {
+        for (char c = 32; c < 52; c++) {
             System.out.print(c + " ");
         }
 
