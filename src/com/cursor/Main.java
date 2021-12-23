@@ -13,8 +13,8 @@ public class Main {
 
         System.out.println("1. Заповнити масив тільки парними числами:");
         int[] arrayGeneral = new int[25];
-        for (int i = 0; i < arrayGeneral.length; i += 2) {
-            arrayGeneral[i] += i;
+        for (int i = 0; i < arrayGeneral.length; i++) {
+            arrayGeneral[i] = (i * 2);
             System.out.print(arrayGeneral[i] + " ");
         }
 
