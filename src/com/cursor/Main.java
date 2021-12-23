@@ -70,11 +70,12 @@ public class Main {
         }
         System.out.print(sumEven);
 
-        System.out.println("\n"+"10. Вивести перших 20 символів з таблиці ASCI:");
+        System.out.println("\n" + "10. Вивести перших 20 символів з таблиці ASCI:");
         for (char c = 32; c < 52; c++) {
             System.out.print(c + " ");
         }
-
+    }
+}
 
 /*
             *   Заповнити масив рандомними числами, вивести їх, потім поміняти місцями парні з непарними;
@@ -101,5 +102,4 @@ public class Main {
             }
         }
 */
-    }
-}
+
